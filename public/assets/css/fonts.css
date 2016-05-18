@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Reklame Script Regular';
+    src: url('../fonts/webfontkit/reklamescript-regular_demo-webfont.eot');
+    src: url('../fonts/webfontkit/reklamescript-regular_demo-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/webfontkit/reklamescript-regular_demo-webfont.woff2') format('woff2'),
+    url('../fonts/webfontkit/reklamescript-regular_demo-webfont.woff') format('woff'),
+    url('../fonts/Reklame-Script-Regular-DEMO.ttf') format('truetype'),
+    url('../fonts/webfontkit/reklamescript-regular_demo-webfont.svg#ReklameScriptRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'RoadRadio-Thin';
+    src: url('../fonts/RoadRadio-Thin.ttf');
+url('fonts/RoadRadio-Thin.ttf.ttf') format('truetype'),
+}
