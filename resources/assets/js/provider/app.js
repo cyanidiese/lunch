@@ -4,7 +4,7 @@
     angular.module('providerLunchApp', [
         'ngRoute',
         'ngResource',
-        'ngAnimate',
+        //'ngAnimate',
         'lunchDirectives',
         'lunchFactories'
     ]);

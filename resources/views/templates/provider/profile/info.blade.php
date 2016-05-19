@@ -1,3 +1,8 @@
+<lunch-menu
+    special="provider"
+    page="vm.page"
+    ></lunch-menu>
+<div class="ui bottom attached segment">
 <div class="ui card">
   <div class="image">
     <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
@@ -17,4 +22,5 @@
       22 Friends
     </a>
   </div>
+</div>
 </div>

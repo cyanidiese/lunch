@@ -1,3 +1,8 @@
+<lunch-menu
+    special="provider"
+    page="vm.page"
+    ></lunch-menu>
+<div class="ui bottom attached segment">
 <div class="ui horizontal divider">
     <h2>Dishes</h2>
 </div>
@@ -80,3 +85,4 @@
     maximum="vm.dishes_per_page"
     total="vm.filtered_dishes_by_cat.inactive.length"
     ></lunch-pagination>
+</div>

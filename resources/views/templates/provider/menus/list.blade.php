@@ -1,3 +1,8 @@
+<lunch-menu
+    special="provider"
+    page="vm.page"
+    ></lunch-menu>
+<div class="ui bottom attached segment">
 <div class="ui relaxed divided list">
   <div class="item">
     <i class="large github middle aligned icon"></i>
@@ -20,4 +25,5 @@
       <div class="description">Updated 34 mins ago</div>
     </div>
   </div>
+</div>
 </div>

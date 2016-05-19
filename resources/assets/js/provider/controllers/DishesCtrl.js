@@ -11,6 +11,8 @@
     function DishesCtrl($scope, dishes, categories){
         var vm = this;
 
+        vm.page = 'dishes';
+
         vm.categories = [];
         vm.dishes = [];
         vm.filtered_dishes_by_cat = {

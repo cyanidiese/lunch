@@ -16,6 +16,7 @@ elixir(function(mix)
         .scripts([
             'directives/directives.js',
             'directives/PaginationDirective.js',
+            'directives/MenuDirective.js',
             'directives/DimmerDirective.js'
         ], 'public/assets/js/directives.min.js')
         .scripts([
@@ -25,7 +26,6 @@ elixir(function(mix)
         ], 'public/assets/js/factories.min.js')
         .scripts([
             'provider/app.js',
-            'provider/controllers/HeaderCtrl.js',
             'provider/controllers/OrdersCtrl.js',
             'provider/controllers/ProfileCtrl.js',
             'provider/controllers/AlertCtrl.js',

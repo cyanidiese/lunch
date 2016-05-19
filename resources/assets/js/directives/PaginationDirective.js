@@ -32,7 +32,6 @@
 
                 $scope.setNewCurrentPage = function(page){
                     $scope.current = page;
-                    console.log(page);
                 }
             }
         };

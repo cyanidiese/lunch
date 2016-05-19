@@ -6,10 +6,12 @@
         .controller('AlertCtrl', AlertCtrl);
 
 
-    function AlertCtrl($scope){
-        $scope.data = {
-            Colors: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-        }
+    function AlertCtrl(){
+
+        var vm = this;
+
+        vm.page = 'alert';
+
     }
 
 })();

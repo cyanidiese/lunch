@@ -7,9 +7,10 @@
 
 
     function OrdersCtrl($scope){
-        $scope.data = {
-            Colors: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-        }
+
+        var vm = this;
+
+        vm.page = 'orders';
     }
 
 })();

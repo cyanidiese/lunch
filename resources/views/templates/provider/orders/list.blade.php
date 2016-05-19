@@ -1,3 +1,8 @@
+<lunch-menu
+    special="provider"
+    page="vm.page"
+    ></lunch-menu>
+<div class="ui bottom attached segment">
 <table class="ui celled table">
   <thead>
     <tr><th>Header</th>
@@ -40,3 +45,4 @@
     </th>
   </tr></tfoot>
 </table>
+</div>

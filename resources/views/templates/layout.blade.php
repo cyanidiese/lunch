@@ -25,45 +25,8 @@
 
         <section class="content">
             <div class="ui container">
-            <div class="ui top attached tabular menu" >
-              <a href="#/" class="item active">
-                Orders
-              </a>
-              <a href="#/profile" class="item">
-                Profile
-              </a>
-              <a href="#/alert" class="item">
-                <i class="alarm outline icon"></i>
-              </a>
-              <div class="right menu">
+            <div ng-view></div>
 
-              <a href="#/menus" class="item">
-                Menus
-              </a>
-              <a href="#/dishes" class="item">
-                Dishes
-              </a>
-              <a href="{{route('logout')}}" class="item">
-                <i class="sign out icon"></i>
-              </a>
-              </div>
-            </div>
-            <div class="ui bottom attached segment">
-              <div ng-view></div>
-            </div>
-
-
-
-                {{--<div class="ui segment" ng-controller="HeaderCtrl">--}}
-                    {{--<!-- content -->--}}
-                    {{--@{{titlez}}--}}
-                    {{--<!-- /content -->--}}
-                {{--</div>--}}
-                {{--<div class="ui">--}}
-                    {{--<!-- content -->--}}
-                    {{--<div ng-view></div>--}}
-                    {{--<!-- /content -->--}}
-                {{--</div>--}}
             </div>
         </section>
 
@@ -91,16 +54,21 @@
                 categories : '{{route('factories.categories.list')}}'
             },
             directives : {
-                pagination : '{{route('directives.pagination')}}'
+                pagination : '{{route('directives.pagination')}}',
+                menu : '{{route('directives.menu')}}'
             }
         };
 
         </script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-resource.js"></script>
+        {{--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>--}}
+        {{--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>--}}
+        {{--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>--}}
+        {{--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-resource.js"></script>--}}
+
+        <script src="{{ asset_url('/assets/third-party/angularjs/js/1.2.7/angular.min.js') }}"></script>
+        <script src="{{ asset_url('/assets/third-party/angularjs/js/1.2.7/angular-route.min.js') }}"></script>
+        <script src="{{ asset_url('/assets/third-party/angularjs/js/1.2.7/angular-resource.min.js') }}"></script>
 
         <script src="{{ asset_url('/assets/third-party/jquery/js/jquery.min.js') }}"></script>
         <script src="{{ asset_url('/assets/third-party/semantic-ui/js/semantic.min.js') }}"></script>
