@@ -15,6 +15,7 @@
 
         vm.categories = [];
         vm.dishes = [];
+
         vm.filtered_dishes_by_cat = {
             active: [],
             inactive: []
@@ -32,8 +33,13 @@
             inactive: 1
         };
         vm.dishes_per_page     = 8;
+
+        vm.current_dish = [];
+        vm.single_dish_view = false;
+
         vm.showCategory        = showCategory;
         vm.categoryDishesCount = categoryDishesCount;
+        vm.showSingleDish      = showSingleDish;
 
         getCategories();
         getDishes();
@@ -64,6 +70,21 @@
             filterDishes();
         }
 
+        function getCategoryNameById(category_id)
+        {
+            var name = '';
+
+            angular.forEach(vm.categories, function(category)
+            {
+                if(category.id == category_id)
+                {
+                    name = category.name;
+                }
+            });
+
+            return name;
+        }
+
         function categoryDishesCount(category_id, is_active)
         {
             var count = 0;
@@ -85,18 +106,24 @@
                 active: [],
                 inactive: []
             };
+
             vm.filtered_dishes_by_cat = {
                 active: [],
                 inactive: []
             };
-            angular.forEach(vm.dishes, function(dish) {
+
+            angular.forEach(vm.dishes, function(dish)
+            {
+                dish.category_name = getCategoryNameById(dish.category_id);
+
                 var type = (dish.is_active)? 'active' : 'inactive',
                     in_current_category = (vm.current_category[type] == 'all' || dish.category_id == vm.current_category[type]);
                 if(in_current_category) {
                     vm.filtered_dishes_by_cat[type].push(dish);
                 }
             });
-            angular.forEach(vm.filtered_dishes_by_cat, function(dishes, type) {
+            angular.forEach(vm.filtered_dishes_by_cat, function(dishes, type)
+            {
                 var current_page = vm.current_pages[type],
                     begin = ((current_page - 1) * vm.dishes_per_page),
                     end = begin + vm.dishes_per_page;
@@ -108,6 +135,16 @@
         $scope.$watch('vm.current_pages.active + vm.current_pages.inactive + vm.dishes_per_page', function(current, original) {
             filterDishes();
         });
+
+        //##################################################
+
+
+        function showSingleDish(dish)
+        {
+            vm.current_dish = dish;
+            vm.single_dish_view = true;
+        }
+
     }
 
 })();

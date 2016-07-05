@@ -2,15 +2,15 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix)
 {
-    //mix.less([
-    //    'reset.less',
-    //    'styles.less',
-    //    'provider.less',
-    //    'media.less'
-    //], 'public/assets/css/app.min.css')
-    //    .less([
-    //        'auth.less'
-    //    ], 'public/assets/css/auth.min.css');
+    mix.less([
+       'reset.less',
+       'styles.less',
+       'provider.less',
+       'media.less'
+    ], 'public/assets/css/app.min.css')
+       .less([
+           'auth.less'
+       ], 'public/assets/css/auth.min.css');
 
     mix
         .scripts([

@@ -1,7 +1,7 @@
 <div class="ui inverted dimmer">
     <div class="content">
         <div class="center">
-            <h5 class="ui header">Category</h5>
+            <h5 class="ui header">@{{ dish.category_name }}</h5>
             <h2 class="ui header">View</h2>
         </div>
     </div>

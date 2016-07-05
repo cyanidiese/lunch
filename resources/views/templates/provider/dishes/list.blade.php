@@ -7,6 +7,8 @@
         <h2>Dishes</h2>
     </div>
 
+    <div ng-hide="vm.single_dish_view">
+
     <div class="ui menu">
         <a class="item" ng-click="vm.showCategory('all', 'active')"
            ng-class="(vm.current_category.active == 'all')?'active':''">
@@ -27,7 +29,10 @@
     </div>
 
     <div class="ui medium images dishes-list">
-        <a class="ui medium image" ng-repeat="dish in vm.filtered_dishes.active" lunch-dish="dish" lunch-dimmer></a>
+        <a class="ui medium image"
+           ng-repeat="dish in vm.filtered_dishes.active" lunch-dish="dish" lunch-dimmer
+           ng-click="vm.showSingleDish(dish)"
+        ></a>
     </div>
 
     <lunch-pagination
@@ -55,7 +60,10 @@
     </div>
 
     <div class="ui medium images dishes-list">
-        <a class="ui medium image" ng-repeat="dish in vm.filtered_dishes.inactive" lunch-dish="dish" lunch-dimmer></a>
+        <a class="ui medium image"
+           ng-repeat="dish in vm.filtered_dishes.inactive" lunch-dish="dish" lunch-dimmer
+           ng-click="vm.showSingleDish(dish)"
+        ></a>
     </div>
 
     <lunch-pagination
@@ -63,4 +71,9 @@
             maximum="vm.dishes_per_page"
             total="vm.filtered_dishes_by_cat.inactive.length"
     ></lunch-pagination>
+
+    </div>
+    <div ng-show="vm.single_dish_view">
+@{{ vm.current_dish | json }}
+    </div>
 </div>

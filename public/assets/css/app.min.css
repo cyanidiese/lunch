@@ -169,6 +169,9 @@ footer .footer-tabs li a {
   width: 23% !important;
   margin: 0px 1% 10px 1% !important;
 }
+[lunch-dish] {
+  cursor: pointer;
+}
 
 
 /*# sourceMappingURL=app.min.css.map */
