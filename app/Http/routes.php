@@ -99,6 +99,9 @@ Route::group(['prefix' => 'directives', 'middleware' => []], function() {
     Route::get('/menu', 'Directives\IndexController@menu')
         ->name('directives.menu');
 
+    Route::get('/dish', 'Directives\IndexController@dish')
+        ->name('directives.dish');
+
 });
 
 /*

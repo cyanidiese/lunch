@@ -52,4 +52,15 @@ class IndexController extends Controller
         return view('templates.directives.menu');
     }
 
+    /**
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function dish(Request $request)
+    {
+
+        return view('templates.directives.dish');
+    }
+
 }

@@ -6,7 +6,7 @@
         Profile
     </a>
     <a href="#/alert" class="item" ng-class="(page == 'alert')?'active':''">
-        <i class="alarm outline icon"></i>@{{ page }} - @{{ special }} - @{{ menuType() }}
+        <i class="alarm outline icon"></i>
     </a>
     <div class="right menu">
         <a href="#/menus" class="item" ng-class="(page == 'menus')?'active':''">

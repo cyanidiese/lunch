@@ -41,6 +41,7 @@ class DishesSeeder extends Seeder
             $dish->name_en = $faker_en->sentence(rand(1,5));
             $dish->name_uk = $faker_uk->sentence(rand(1,5));
             $dish->name_ru = $faker_ru->sentence(rand(1,5));
+            $dish->is_active = 1;
             $dish->description_en = $faker_en->sentence(rand(10,40));
             $dish->description_uk = $faker_uk->sentence(rand(10,40));
             $dish->description_ru = $faker_ru->sentence(rand(10,40));

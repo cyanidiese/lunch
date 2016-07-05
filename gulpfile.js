@@ -17,7 +17,8 @@ elixir(function(mix)
             'directives/directives.js',
             'directives/PaginationDirective.js',
             'directives/MenuDirective.js',
-            'directives/DimmerDirective.js'
+            'directives/DimmerDirective.js',
+            'directives/DishDirective.js'
         ], 'public/assets/js/directives.min.js')
         .scripts([
             'factories/factories.js',

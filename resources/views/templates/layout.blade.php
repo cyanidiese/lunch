@@ -55,7 +55,8 @@
             },
             directives : {
                 pagination : '{{route('directives.pagination')}}',
-                menu : '{{route('directives.menu')}}'
+                menu : '{{route('directives.menu')}}',
+                dish : '{{route('directives.dish')}}'
             }
         };
 
