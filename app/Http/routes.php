@@ -36,7 +36,7 @@ Route::get('/logout', 'Auth\LogoutController@index')
 |-----------------------------------------------------------------------------------------------------------------------
 */
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function() {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () {
 
     Route::get('/', 'Admin\IndexController@index')
         ->name('admin');
@@ -48,7 +48,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 | MASTER
 |-----------------------------------------------------------------------------------------------------------------------
 */
-Route::group(['prefix' => 'master', 'middleware' => ['auth', 'role:admin|master']], function() {
+Route::group(['prefix' => 'master', 'middleware' => ['auth', 'role:admin|master']], function () {
 
     Route::get('/', 'Master\IndexController@index')
         ->name('master');
@@ -60,12 +60,12 @@ Route::group(['prefix' => 'master', 'middleware' => ['auth', 'role:admin|master'
 | PROVIDER
 |-----------------------------------------------------------------------------------------------------------------------
 */
-Route::group(['prefix' => 'provider', 'middleware' => ['auth', 'role:provider']], function() {
+Route::group(['prefix' => 'provider', 'middleware' => ['auth', 'role:provider']], function () {
 
     Route::get('/', 'Provider\IndexController@index')
         ->name('provider');
 
-    Route::group(['prefix' => 'views'], function() {
+    Route::group(['prefix' => 'views'], function () {
 
         Route::get('/orders', 'Provider\Views\OrdersController@lists')
             ->name('provider.views.orders.list');
@@ -91,10 +91,13 @@ Route::group(['prefix' => 'provider', 'middleware' => ['auth', 'role:provider']]
 | DIRECTIVES
 |-----------------------------------------------------------------------------------------------------------------------
 */
-Route::group(['prefix' => 'directives', 'middleware' => []], function() {
+Route::group(['prefix' => 'directives', 'middleware' => []], function () {
 
     Route::get('/pagination', 'Directives\IndexController@pagination')
         ->name('directives.pagination');
+
+    Route::get('/menu', 'Directives\IndexController@menu')
+        ->name('directives.menu');
 
 });
 
@@ -103,7 +106,7 @@ Route::group(['prefix' => 'directives', 'middleware' => []], function() {
 | FACTORIES
 |-----------------------------------------------------------------------------------------------------------------------
 */
-Route::group(['prefix' => 'factories', 'middleware' => ['auth']], function() {
+Route::group(['prefix' => 'factories', 'middleware' => ['auth']], function () {
 
     Route::get('/dishes', 'Factories\DishesController@getDishes')
         ->name('factories.dishes.list');
@@ -118,9 +121,9 @@ Route::group(['prefix' => 'factories', 'middleware' => ['auth']], function() {
 | API
 |-----------------------------------------------------------------------------------------------------------------------
 */
-Route::group(['prefix' => 'api', 'middleware' => []], function() {
+Route::group(['prefix' => 'api', 'middleware' => []], function () {
 
-    Route::group(['prefix' => 'v1', 'middleware' => []], function() {
+    Route::group(['prefix' => 'v1', 'middleware' => []], function () {
 
         Route::get('/', 'Api\V1\IndexController@index')
             ->name('api.v1');

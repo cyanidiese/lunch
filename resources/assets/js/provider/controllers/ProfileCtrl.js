@@ -5,11 +5,13 @@
         .module('providerLunchApp')
         .controller('ProfileCtrl', ProfileCtrl);
 
+    ProfileCtrl.$inject = ['$scope'];
 
     function ProfileCtrl($scope){
-        $scope.data = {
-            Colors: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-        }
+
+        var vm = this;
+
+        vm.page = 'profile';
     }
 
 })();

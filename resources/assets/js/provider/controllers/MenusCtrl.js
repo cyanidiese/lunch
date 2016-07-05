@@ -5,11 +5,13 @@
         .module('providerLunchApp')
         .controller('MenusCtrl', MenusCtrl);
 
+    MenusCtrl.$inject = ['$scope'];
 
     function MenusCtrl($scope){
-        $scope.data = {
-            Colors: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-        }
+
+        var vm = this;
+
+        vm.page = 'menus';
     }
 
 })();

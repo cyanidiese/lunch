@@ -9,7 +9,10 @@
     DishesCtrl.$inject = ['$scope', 'dishes', 'categories'];
 
     function DishesCtrl($scope, dishes, categories){
+        
         var vm = this;
+
+        vm.page = 'dishes';
 
         vm.categories = [];
         vm.dishes = [];

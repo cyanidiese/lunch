@@ -5,11 +5,13 @@
         .module('providerLunchApp')
         .controller('AlertCtrl', AlertCtrl);
 
+    AlertCtrl.$inject = ['$scope'];
 
     function AlertCtrl($scope){
-        $scope.data = {
-            Colors: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-        }
+
+        var vm = this;
+
+        vm.page = 'alert';
     }
 
 })();

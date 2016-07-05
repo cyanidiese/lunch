@@ -37,8 +37,17 @@ class IndexController extends Controller
      */
     public function pagination(Request $request)
     {
-
         return view('templates.directives.pagination');
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function menu(Request $request)
+    {
+        return view('templates.directives.menu');
     }
 
 }
