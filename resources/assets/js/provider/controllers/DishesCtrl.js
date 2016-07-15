@@ -39,7 +39,12 @@
 
         vm.showCategory        = showCategory;
         vm.categoryDishesCount = categoryDishesCount;
+
         vm.showSingleDish      = showSingleDish;
+        vm.removeSingleDish    = removeSingleDish;
+        vm.restoreSingleDish   = restoreSingleDish;
+        vm.editSingleDish      = editSingleDish;
+        vm.hideSingleDish      = hideSingleDish;
 
         getCategories();
         getDishes();
@@ -143,6 +148,26 @@
         {
             vm.current_dish = dish;
             vm.single_dish_view = true;
+        }
+
+        function removeSingleDish(dish)
+        {
+
+        }
+
+        function restoreSingleDish(dish)
+        {
+
+        }
+
+        function editSingleDish(dish)
+        {
+
+        }
+
+        function hideSingleDish()
+        {
+            vm.single_dish_view = false;
         }
 
     }
